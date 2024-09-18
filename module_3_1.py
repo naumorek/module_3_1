@@ -23,18 +23,21 @@ def string_info(string):
 
 def is_contains(string, list_to_search):
     k = 0
+    flag=True
     for i in list_to_search:
         string_l = string.lower()
         element_list = i
         element_list = element_list.lower()
         if string_l == element_list:
             k = k + 1
-
     if k >= 1:
-        print("True")
+        flag=True
     else:
-        print("False")
+        flag=False
     count_calls()
+    return flag
+
+
 
 
 print(string_info('Capybara'))
